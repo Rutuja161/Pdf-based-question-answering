@@ -9,5 +9,5 @@ This is the research project for my master's in Data analytics. This aims to bui
 - Question Answering System by fine-tuning DistillBERT on SQAuD dataset for PDFS from the financial domain.
 
 ##Challenges:
-- BERT has a limitation of processing 512 tokens and the PDFs chosen were longer than the 512 token limit. The model worked fine for short paragraphs extracting accurate answers while it performed poorly for long documents containing complex texts. To overcome this, PDFs were split into chunks of 512 and then fed to the QA model to extract answers. 
-- 
+- BERT has a limitation of processing 512 tokens and the PDFs chosen were longer than the 512 token limit. The model worked fine for short paragraphs extracting accurate answers while it performed poorly for long documents containing complex texts. To overcome this, PDFs were split into chunks of 512 using the 'expand_split_sentences' function and then fed to the QA model to extract answers. This way, more than one chunk has the correct answer, and the answer is constructed by finding the maximum start score of the answer span. 
+- Splitting PDF text into chunks can result in loss of context in case of complex documents. To overcome this limitation, a curated dataset was made with 'question', 'context', and 'ground truth' columns for the chosen PDFs.This method provides an efficient way to evaluate the QA pipeline for long documents.
