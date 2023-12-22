@@ -1,6 +1,6 @@
 #Pdf-based-question-answering
 
-This is the research project for my master's in Data analytics. This aims to build a smart question-answering system for PDF files using BERT-based transformers.
+This repository hosts a collection of Question Answering Systems (QAS) tailored for PDF documents from distinct domains, namely financial, scientific, and biomedical. The systems are built using fine-tuned BERT base, BERT large, SciBERT, Bio-clinicalBERT, and DistillBERT models, offering specialized solutions for each domain. Additionally, the repository includes a comprehensive dataset creation process for each domain and a cross-domain evaluation to assess the models' generalization capabilities.
 
 ##Approches:
 - Question Answering System Using fine-tuned BERT base and BERT large for PDFs from the financial domain.
